@@ -28,7 +28,7 @@ The project addresses the following analytical problems:
 
 Three normalized tables were created:
 
-*Table 1:* disaster_events
+*Table 1:* *disaster_events:*
    Column	Type
    event_id	INT (PK)
    disaster_type	VARCHAR
@@ -36,14 +36,14 @@ Three normalized tables were created:
    event_date	DATE
    severity	VARCHAR
  
- *Table 2:* regions
+ *Table 2:* *regions:*
    Column	Type
    region_id	INT (PK)
    region	VARCHAR
    population	BIGINT
    area_sq_km	INT
  
- *Table 3:* impact_assessment
+ *Table 3:* *impact_assessment:*
    Column	Type
    impact_id	INT (PK)
    event_id	INT (FK)
