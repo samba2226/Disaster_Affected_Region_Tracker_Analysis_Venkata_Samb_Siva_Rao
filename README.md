@@ -58,7 +58,7 @@ Performed in Python using Pandas.
 
 * Handling Invalid Dates 
    * Used pd.to_datetime(errors='coerce')
-*Converted invalid values to NAt 
+* Converted invalid values to NAt 
   * Applied forward fill and backward fill where required
 * Handling Missing Values 
     * Affected people → replaced with 0
@@ -72,8 +72,8 @@ Performed in Python using Pandas.
  * Grouped by region
  * Aggregated total affected people
  * Sorted descending
-*Visualization: Bar Chart
-*Purpose: Identify most vulnerable regions
+* Visualization: Bar Chart
+* Purpose: Identify most vulnerable regions
 
 2.Severity Distribution by Disaster Type
 
