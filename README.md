@@ -6,9 +6,9 @@
 
    *The system integrates:*
    
-    * Relational Database (MySQL)
-    * Python Data Analysis (Pandas)
-    * Data Visualization (Matplotlib)
+     Relational Database (MySQL)
+     Python Data Analysis (Pandas)
+     Data Visualization (Matplotlib)
    
    The goal is to provide region-wise insights, severity distribution, monthly trends, and economic impact visualization.
 
@@ -29,26 +29,26 @@ The project addresses the following analytical problems:
 Three normalized tables were created:
 
 *Table 1:* disaster_events
- Column	Type
- event_id	INT (PK)
- disaster_type	VARCHAR
- region	VARCHAR
- event_date	DATE
- severity	VARCHAR
+   Column	Type
+   event_id	INT (PK)
+   disaster_type	VARCHAR
+   region	VARCHAR
+   event_date	DATE
+   severity	VARCHAR
  
  *Table 2:* regions
- Column	Type
- region_id	INT (PK)
- region	VARCHAR
- population	BIGINT
- area_sq_km	INT
+   Column	Type
+   region_id	INT (PK)
+   region	VARCHAR
+   population	BIGINT
+   area_sq_km	INT
  
  *Table 3:* impact_assessment
- Column	Type
- impact_id	INT (PK)
- event_id	INT (FK)
- affected_people	INT
- economic_loss_musd	DECIMAL
+   Column	Type
+   impact_id	INT (PK)
+   event_id	INT (FK)
+   affected_people	INT
+   economic_loss_musd	DECIMAL
  
 Foreign key ensures referential integrity.
 
@@ -56,11 +56,11 @@ Foreign key ensures referential integrity.
 
 Performed in Python using Pandas.
 
-* Handling Invalid Dates *
+* Handling Invalid Dates 
    * Used pd.to_datetime(errors='coerce')
-*Converted invalid values to NAt *
+*Converted invalid values to NAt 
   * Applied forward fill and backward fill where required
-* Handling Missing Values *
+* Handling Missing Values 
     * Affected people → replaced with 0
     * Economic loss → replaced with 0
     * Population → filled with median
@@ -72,37 +72,37 @@ Performed in Python using Pandas.
  * Grouped by region
  * Aggregated total affected people
  * Sorted descending
-*Visualization:* Bar Chart
-*Purpose:* Identify most vulnerable regions
+*Visualization: Bar Chart
+*Purpose: Identify most vulnerable regions
 
 2.Severity Distribution by Disaster Type
 
  * Created pivot table
  * Counted frequency of Low, Medium, High severity
-* Visualization: * Grouped Bar Chart
-* Purpose: * Understand which disaster types are generally more severe
+* Visualization:  Grouped Bar Chart
+* Purpose:  Understand which disaster types are generally more severe
 
 3.Monthly Disaster Trend
 
  * Converted event_date to datetime
  * Resampled monthly using 'ME'
  * Counted number of events
-* Visualization: * Line Chart
-* Purpose: * Identify seasonal or increasing trends
+* Visualization:  Line Chart
+* Purpose:  Identify seasonal or increasing trends
 
 4.Economic Loss vs Affected Population
 
 * Scatter plot
 * Compared affected_people with economic_loss_musd
-* Visualization: * Scatter Plot
-* Purpose: * Analyze correlation between human and economic impact
+* Visualization:  Scatter Plot
+* Purpose:  Analyze correlation between human and economic impact
 
 5.Region-wise Disaster Frequency Heatmap
 
  * Created pivot table: region × disaster_type
  * Used imshow() with colorbar
-* Visualization: * Heatmap
-* Purpose: * Identify disaster concentration zones
+* Visualization:  Heatmap
+* Purpose:  Identify disaster concentration zones
 
 **Technologies Used**
 Technology	Purpose
@@ -112,7 +112,7 @@ Technology	Purpose
 * Pandas	Data manipulation
 * Matplotlib	Visualization
 * SQLAlchemy	Database connection
-* 
+
 **Key Learnings**
 
 * Database normalization
